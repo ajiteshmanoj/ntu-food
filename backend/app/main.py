@@ -8,7 +8,7 @@ import logging
 import traceback
 
 from app.database.database import Base, engine
-from app.routes import auth, auth_otp, stalls, orders, menu, queue, users, admin
+from app.routes import auth, auth_otp, stalls, orders, menu, queue, users, admin, reviews
 from app.config import settings
 
 # Configure logging
@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Import models to ensure they're registered
-    from app.models import user, stall, menu, order, queue, otp
+    from app.models import user, stall, menu, order, queue, otp, review
     # Create tables
     Base.metadata.create_all(bind=engine)
     logger.info(f"NTU Food API started in {settings.ENVIRONMENT} mode")
@@ -103,6 +103,7 @@ app.include_router(stalls.router, prefix="/api/stalls", tags=["Stalls"])
 app.include_router(menu.router, prefix="/api/menu", tags=["Menu"])
 app.include_router(orders.router, prefix="/api/orders", tags=["Orders"])
 app.include_router(queue.router, prefix="/api/queue", tags=["Queue"])
+app.include_router(reviews.router, prefix="/api/reviews", tags=["Reviews"])
 app.include_router(admin.router, prefix="/api/admin", tags=["Admin"])
 
 if __name__ == "__main__":

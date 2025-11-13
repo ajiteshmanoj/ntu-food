@@ -39,6 +39,7 @@ class Order(Base):
     stall = relationship("Stall", back_populates="orders")
     order_items = relationship("OrderItem", back_populates="order", cascade="all, delete-orphan")
     queue_entry = relationship("QueueEntry", back_populates="order", uselist=False)
+    review = relationship("Review", back_populates="order", uselist=False)
 
 class OrderItem(Base):
     __tablename__ = "order_items"

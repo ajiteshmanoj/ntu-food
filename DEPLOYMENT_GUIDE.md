@@ -146,7 +146,8 @@ USE_SUPABASE_EMAIL=false
 ### Step 6: Generate SECRET_KEY
 Run this in your terminal:
 ```bash
-openssl rand -hex 32
+hi
+
 ```
 Copy the output and use it as `SECRET_KEY` in Render.
 

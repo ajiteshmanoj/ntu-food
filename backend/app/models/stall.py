@@ -28,3 +28,4 @@ class Stall(Base):
     menu_items = relationship("MenuItem", back_populates="stall", cascade="all, delete-orphan")
     orders = relationship("Order", back_populates="stall")
     queue_entries = relationship("QueueEntry", back_populates="stall")
+    reviews = relationship("Review", back_populates="stall", cascade="all, delete-orphan")

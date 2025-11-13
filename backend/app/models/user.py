@@ -27,3 +27,4 @@ class User(Base):
 
     orders = relationship("Order", back_populates="user")
     owned_stalls = relationship("Stall", back_populates="owner")
+    reviews = relationship("Review", back_populates="user")
