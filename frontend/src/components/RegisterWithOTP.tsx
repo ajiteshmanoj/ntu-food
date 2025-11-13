@@ -386,7 +386,7 @@ const RegisterWithOTP = () => {
                     Create Account
                   </h1>
                   <h2 className="text-slate-500 text-lg font-medium m-0">
-                    Register with your NTU credentials
+                    Register with your campus email
                   </h2>
                 </div>
 
