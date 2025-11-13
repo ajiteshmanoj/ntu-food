@@ -31,8 +31,8 @@ class UserCreate(BaseModel):
         return email_str
 
         # TO REVERT TO NTU-ONLY: Uncomment code below and delete the "return email_str" above
-        # if not (email_str.endswith('@e.ntu.edu.sg') or email_str.endswith('@ntu.edu.sg')):
-        #     raise ValueError('Email must be a valid NTU email address (@e.ntu.edu.sg or @ntu.edu.sg)')
+        # if not (email_str.endswith('@campuseats.com') or email_str.endswith('@campuseats.com')):
+        #     raise ValueError('Email must be a valid NTU email address (@campuseats.com or @campuseats.com)')
         # return email_str
 
     @validator('student_id')
@@ -91,8 +91,8 @@ class OTPRequest(BaseModel):
         return email_str
 
         # TO REVERT TO NTU-ONLY: Uncomment code below and delete the "return email_str" above
-        # if not (email_str.endswith('@e.ntu.edu.sg') or email_str.endswith('@ntu.edu.sg')):
-        #     raise ValueError('Email must be a valid NTU email address (@e.ntu.edu.sg or @ntu.edu.sg)')
+        # if not (email_str.endswith('@campuseats.com') or email_str.endswith('@campuseats.com')):
+        #     raise ValueError('Email must be a valid NTU email address (@campuseats.com or @campuseats.com)')
         # return email_str
 
     @validator('student_id')

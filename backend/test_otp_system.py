@@ -17,7 +17,7 @@ def test_otp_registration():
 
     # Test data
     test_user = {
-        "ntu_email": "test.otp@e.ntu.edu.sg",
+        "ntu_email": "test.otp@campuseats.com",
         "student_id": "U9999999Z",
         "name": "Test OTP User",
         "phone": "+6591234567",
@@ -94,7 +94,7 @@ def test_otp_registration():
 def test_resend_otp():
     print("\n📨 Testing OTP Resend...")
 
-    test_email = "test.otp@e.ntu.edu.sg"
+    test_email = "test.otp@campuseats.com"
 
     response = requests.post(
         f"{BASE_URL}/api/auth/otp/resend-otp",
@@ -115,7 +115,7 @@ def test_validation():
         "user@hotmail.com",
         "student@yahoo.com",
         "invalid.email",
-        "@ntu.edu.sg",
+        "@campuseats.com",
         "test@"
     ]
 
@@ -140,8 +140,8 @@ def test_validation():
 
     # Test valid NTU emails
     valid_emails = [
-        "student@e.ntu.edu.sg",
-        "faculty@ntu.edu.sg"
+        "student@campuseats.com",
+        "faculty@campuseats.com"
     ]
 
     print("\n✅ Valid NTU email formats:")

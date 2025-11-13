@@ -456,7 +456,7 @@ async def seed_admin_user(db: Session = Depends(get_db)):
         return {"message": "Admin user already exists", "email": existing_admin.ntu_email}
 
     admin_user = User(
-        ntu_email="admin@ntu.edu.sg",
+        ntu_email="admin@campuseats.com",
         student_id="ADMIN001",
         name="System Administrator",
         phone="+65 12345678",
@@ -472,7 +472,7 @@ async def seed_admin_user(db: Session = Depends(get_db)):
 
     return {
         "message": "Admin user created successfully",
-        "email": "admin@ntu.edu.sg",
+        "email": "admin@campuseats.com",
         "password": "admin123",
         "note": "Please change the password after first login"
     }

@@ -1,10 +1,10 @@
-# NTU Food Ordering System
+# CampusEats Ordering System
 
-A comprehensive Grab-style food ordering platform for Nanyang Technological University (NTU) students, featuring complete order management, real-time tracking, and intelligent notifications.
+A comprehensive Grab-style food ordering platform for university students, featuring complete order management, real-time tracking, and intelligent notifications.
 
 ## 🎯 Overview
 
-NTU Food is a production-ready, mobile-first food ordering application designed to streamline the food ordering process at NTU campus stalls. The system provides a complete Grab-like experience with cart management, scheduled pickups, real-time order tracking, and sound notifications for both students and stall owners.
+CampusEats is a production-ready, mobile-first food ordering application designed to streamline the food ordering process at campus stalls. The system provides a complete Grab-like experience with cart management, scheduled pickups, real-time order tracking, and sound notifications for both students and stall owners.
 
 ## ✅ **Current Status: 100% COMPLETE PRODUCTION APPLICATION**
 
@@ -66,7 +66,7 @@ Both backend API and frontend application are fully functional with complete Gra
 - **📍 Location-Based Recommendations**: Find nearby stalls using GPS with distance and walking time
 - **🗺️ Distance Filtering**: Filter stalls by radius (≤500m, ≤1km, ≤2km, ≤5km)
 - **📋 Order History**: Active and past orders with detailed tracking
-- **🔐 NTU Authentication**: Secure 2-factor authentication with OTP email verification
+- **🔐 Email Authentication**: Secure 2-factor authentication with OTP email verification
 
 ### For Stall Owners (Web Dashboard)
 - **📊 Kanban Order Management**: 4-column view (Pending Payment → In Queue → Preparing → Ready)
@@ -126,7 +126,7 @@ Both backend API and frontend application are fully functional with complete Gra
 ## 🏗️ Architecture
 
 ```
-NTU-Food/
+CampusEats/
 ├── backend/            # FastAPI backend service
 │   ├── app/
 │   │   ├── main.py     # FastAPI application entry point
@@ -222,13 +222,13 @@ npm run dev
 ### Test Accounts
 
 **Admin:**
-- Email: `admin@ntu.edu.sg`
+- Email: `admin@campuseats.com`
 - Password: `admin123`
 
 **Students** (after running seed_test_users.py):
-- Email: `test.student@e.ntu.edu.sg` | Password: `TestPassword123`
-- Email: `john.tan@e.ntu.edu.sg` | Password: `Password123`
-- Email: `alice.lim@e.ntu.edu.sg` | Password: `Password123`
+- Email: `test.student@campuseats.com` | Password: `TestPassword123`
+- Email: `john.tan@campuseats.com` | Password: `Password123`
+- Email: `alice.lim@campuseats.com` | Password: `Password123`
 
 **Stall Owner:**
 - Register a new account at `/register` or use admin panel to assign stall owner role
@@ -364,7 +364,7 @@ See the full email configuration section in the original README above for:
 - **~8,000+ lines** of production-ready code
 - **50+ API Endpoints** fully functional
 - **25+ React Components** with TypeScript
-- **17 real NTU eateries** with GPS coordinates
+- **17 sample eateries** with GPS coordinates
 - **100% functional** - Complete Grab-style ordering experience
 - **Cloud database** - Supabase PostgreSQL with automatic backups
 
@@ -423,7 +423,7 @@ Successfully built a production-ready, complete food ordering system with all fe
 **Location-Based Stall Discovery (2025-10-16)**
 - GPS-powered proximity search
 - Distance filtering and walking time estimates
-- 17 real NTU eateries imported
+- 17 sample eateries imported
 
 **Supabase Migration Complete (2025-01-13)**
 - Migrated to cloud PostgreSQL
@@ -436,12 +436,12 @@ Successfully built a production-ready, complete food ordering system with all fe
 
 **Ready for**: Deployment, User Testing, Feature Expansion
 
-🎉 **The NTU Food Ordering System is complete and production-ready!**
+🎉 **The CampusEats Ordering System is complete and production-ready!**
 
 ## 📞 Contact
 
-Project Link: [https://github.com/ajiteshmanoj/ntu-food](https://github.com/ajiteshmanoj/ntu-food)
+Project Link: [https://github.com/ajiteshmanoj/campuseats](https://github.com/ajiteshmanoj/campuseats)
 
 ---
 
-Made with ❤️ for NTU Students
+Made with ❤️ for University Students

@@ -1,4 +1,4 @@
-# NTU Food - Production Deployment Guide
+# CampusEats - Production Deployment Guide
 ## 100% FREE Forever - No Credit Card Required
 
 Deploy your complete food ordering system for **$0/month** using:
@@ -22,7 +22,7 @@ Total deployment time: **~20 minutes**
 1. Go to **https://supabase.com** and sign up (no credit card required)
 2. Click **"New Project"**
 3. Fill in:
-   - **Name:** ntu-food-db
+   - **Name:** campuseats-db
    - **Database Password:** Choose a strong password (save it!)
    - **Region:** Choose closest to you (e.g., Southeast Asia)
 4. Click **"Create new project"**
@@ -52,7 +52,7 @@ postgresql://postgres:MySecurePass123@db.abcdefghijk.supabase.co:5432/postgres
 ### If you haven't pushed to GitHub yet:
 ```bash
 # Navigate to your project
-cd /Users/ajitesh/Desktop/My\ Projects/NTU_Food/ntu-food
+cd /Users/ajitesh/Desktop/My\ Projects/NTU_Food/campuseats
 
 # Initialize git (if not already done)
 git init
@@ -64,11 +64,11 @@ git add .
 git commit -m "Ready for Render.com deployment"
 
 # Create a new repository on GitHub (https://github.com/new)
-# Name it: ntu-food
+# Name it: campuseats
 # Don't add README, .gitignore, or license
 
 # Add remote and push
-git remote add origin https://github.com/YOUR_USERNAME/ntu-food.git
+git remote add origin https://github.com/YOUR_USERNAME/campuseats.git
 git branch -M main
 git push -u origin main
 ```
@@ -86,13 +86,13 @@ git push -u origin main
 1. Click **"New +"** in top right
 2. Select **"Web Service"**
 3. Click **"Connect account"** to connect GitHub
-4. Find and select your **ntu-food** repository
+4. Find and select your **campuseats** repository
 5. Click **"Connect"**
 
 ### Step 3: Configure Service
 Render will auto-detect `render.yaml`, but verify these settings:
 
-- **Name:** `ntu-food-backend` (or your choice)
+- **Name:** `campuseats-backend` (or your choice)
 - **Region:** Choose closest to you
 - **Branch:** `main`
 - **Root Directory:** Leave blank (render.yaml is in root)
@@ -122,7 +122,7 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_EMAIL=your-gmail@gmail.com
 SMTP_PASSWORD=<Gmail App Password - see below>
-SMTP_FROM_NAME=NTU Food
+SMTP_FROM_NAME=CampusEats
 
 # 5. CORS (temporary - will update after Vercel deployment)
 CORS_ORIGINS=http://localhost:5173
@@ -138,7 +138,7 @@ USE_SUPABASE_EMAIL=false
 1. Go to **https://myaccount.google.com/apppasswords**
 2. Sign in to your Gmail account
 3. App: Select **"Mail"**
-4. Device: Select **"Other"** and type **"NTU Food"**
+4. Device: Select **"Other"** and type **"CampusEats"**
 5. Click **"Generate"**
 6. Copy the **16-character password** (e.g., `abcd efgh ijkl mnop`)
 7. Use this as `SMTP_PASSWORD` in Render (no spaces)
@@ -159,8 +159,8 @@ Copy the output and use it as `SECRET_KEY` in Render.
 
 ### Step 8: Get Your Backend URL
 1. Once deployed, copy your Render URL from the top of the page
-2. It will look like: `https://ntu-food-backend.onrender.com`
-3. **Test it:** Visit `https://ntu-food-backend.onrender.com/health`
+2. It will look like: `https://campuseats-backend.onrender.com`
+3. **Test it:** Visit `https://campuseats-backend.onrender.com/health`
    - Should return: `{"status":"healthy"}`
 4. **Save this URL** - you'll need it for Vercel
 
@@ -175,7 +175,7 @@ Copy the output and use it as `SECRET_KEY` in Render.
 
 ### Step 2: Import Project
 1. Click **"Add New..."** → **"Project"**
-2. Import your **ntu-food** repository
+2. Import your **campuseats** repository
 3. Click **"Import"**
 
 ### Step 3: Configure Build Settings
@@ -191,7 +191,7 @@ Before deploying, add your backend URL:
 1. Click **"Environment Variables"**
 2. Add:
    - **Name:** `VITE_API_URL`
-   - **Value:** `https://ntu-food-backend.onrender.com` (your Render URL from Part 3)
+   - **Value:** `https://campuseats-backend.onrender.com` (your Render URL from Part 3)
    - **Environment:** Select all (Production, Preview, Development)
 3. Click **"Add"**
 
@@ -202,7 +202,7 @@ Before deploying, add your backend URL:
 4. Click the URL to visit your app!
 
 ### Step 6: Get Your Frontend URL
-1. Copy your Vercel URL (e.g., `https://ntu-food.vercel.app`)
+1. Copy your Vercel URL (e.g., `https://campuseats.vercel.app`)
 2. **Save this URL** - you need it for CORS update
 
 ---
@@ -213,20 +213,20 @@ Now that you have your Vercel URL, update the backend CORS:
 
 ### Update in Render:
 1. Go back to **Render Dashboard**
-2. Click on your **ntu-food-backend** service
+2. Click on your **campuseats-backend** service
 3. Click **"Environment"** in left sidebar
 4. Find `CORS_ORIGINS` variable
 5. Click **"Edit"**
 6. Update value to include your Vercel URL:
    ```
-   https://ntu-food.vercel.app,https://ntu-food-*.vercel.app,http://localhost:5173
+   https://campuseats.vercel.app,https://campuseats-*.vercel.app,http://localhost:5173
    ```
    *(Include the `*` version for Vercel preview deployments)*
 7. Click **"Save Changes"**
 
 ### Also update these (optional but recommended):
-- `FRONTEND_URL`: `https://ntu-food.vercel.app`
-- `APP_URL`: `https://ntu-food.vercel.app`
+- `FRONTEND_URL`: `https://campuseats.vercel.app`
+- `APP_URL`: `https://campuseats.vercel.app`
 
 ### Render will auto-redeploy (1-2 minutes)
 
@@ -245,7 +245,7 @@ Now that you have your Vercel URL, update the backend CORS:
 
 ### Test Frontend
 1. Visit your Vercel URL
-2. Try to **register** with your NTU email (`yourname@e.ntu.edu.sg`)
+2. Try to **register** with your NTU email (`yourname@campuseats.com`)
 3. Check your **Gmail inbox** for OTP code
 4. Enter OTP and complete registration
 5. Try **logging in**
@@ -264,7 +264,7 @@ curl -X POST https://your-backend.onrender.com/api/admin/seed-admin
 ```
 
 **Default Admin Login:**
-- Email: `admin@ntu.edu.sg`
+- Email: `admin@campuseats.com`
 - Password: `admin123`
 - **⚠️ IMPORTANT: Change this password immediately!**
 
@@ -391,7 +391,7 @@ SMTP_PASSWORD=<gmail-app-password>
 EMAIL_TESTING_MODE=false
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_FROM_NAME=NTU Food
+SMTP_FROM_NAME=CampusEats
 FRONTEND_URL=https://your-app.vercel.app
 APP_URL=https://your-app.vercel.app
 ```
@@ -498,6 +498,6 @@ When your app grows and you need more:
 
 **🎉 Congratulations!**
 
-Your NTU Food ordering system is now live and accessible worldwide - completely free!
+Your CampusEats ordering system is now live and accessible worldwide - completely free!
 
 Share your Vercel URL with users and start taking orders! 🍜🍔🍕

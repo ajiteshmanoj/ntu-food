@@ -39,8 +39,8 @@ const RegisterWithOTP = () => {
 
     // TO REVERT TO NTU-ONLY: Uncomment code below and delete the "return '';" above
     // const emailLower = email.toLowerCase();
-    // if (!emailLower.endsWith('@e.ntu.edu.sg') && !emailLower.endsWith('@ntu.edu.sg')) {
-    //   return 'Please use your NTU email address (@e.ntu.edu.sg or @ntu.edu.sg)';
+    // if (!emailLower.endsWith('@campuseats.com') && !emailLower.endsWith('@campuseats.com')) {
+    //   return 'Please use your NTU email address (@campuseats.com or @campuseats.com)';
     // }
     // return '';
   };
@@ -353,14 +353,14 @@ const RegisterWithOTP = () => {
               🍽️
             </div>
             <h1 className="text-4xl font-bold mb-4 drop-shadow-md max-[480px]:text-3xl">
-              NTU Food
+              CampusEats
             </h1>
             <p className="text-xl opacity-90 mb-8 leading-relaxed">
               Join the smart food ordering revolution at NTU
             </p>
             <ul className="list-none p-0 m-0">
               <li className="flex items-center mb-4 text-lg opacity-90 before:content-['✓'] before:bg-white/20 before:text-white before:w-6 before:h-6 before:rounded-full before:flex before:items-center before:justify-center before:mr-3 before:font-bold before:text-sm">
-                Exclusive for NTU students and staff
+                Exclusive for university students and staff
               </li>
               <li className="flex items-center mb-4 text-lg opacity-90 before:content-['✓'] before:bg-white/20 before:text-white before:w-6 before:h-6 before:rounded-full before:flex before:items-center before:justify-center before:mr-3 before:font-bold before:text-sm">
                 Secure email verification

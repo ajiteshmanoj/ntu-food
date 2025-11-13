@@ -31,8 +31,8 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 // localStorage key
-const CART_STORAGE_KEY = 'ntu_food_cart';
-const CART_STALL_KEY = 'ntu_food_cart_stall';
+const CART_STORAGE_KEY = 'campuseats_cart';
+const CART_STALL_KEY = 'campuseats_cart_stall';
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);

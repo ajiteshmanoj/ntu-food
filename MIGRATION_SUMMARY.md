@@ -29,7 +29,7 @@ All migration files have been created and are ready to use!
 **File:** `backend/seed_supabase.py`
 
 **What it does:**
-- Creates admin user (admin@ntu.edu.sg / admin123)
+- Creates admin user (admin@campuseats.com / admin123)
 - Creates 3 test student accounts
 - Creates 3 food stalls with full details
 - Creates 15 menu items (5 per stall)
@@ -164,13 +164,13 @@ python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ### Admin Panel
 - URL: http://localhost:5174/admin/login
-- Email: admin@ntu.edu.sg
+- Email: admin@campuseats.com
 - Password: admin123
 
 ### Test Students
-1. test.student@e.ntu.edu.sg / testpassword123
-2. john.doe@e.ntu.edu.sg / testpassword123
-3. jane.smith@e.ntu.edu.sg / testpassword123
+1. test.student@campuseats.com / testpassword123
+2. john.doe@campuseats.com / testpassword123
+3. jane.smith@campuseats.com / testpassword123
 
 ---
 

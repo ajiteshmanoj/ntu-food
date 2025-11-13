@@ -1,4 +1,4 @@
-# 🔐 NTU Food Admin Panel - Complete Guide
+# 🔐 CampusEats Admin Panel - Complete Guide
 
 ## ✅ System Overview
 
@@ -27,7 +27,7 @@ python seed_admin.py
 ```
 
 **Default Admin Credentials:**
-- Email: `admin@ntu.edu.sg`
+- Email: `admin@campuseats.com`
 - Password: `admin123`
 
 ### 3. Access Admin Panel
@@ -253,7 +253,7 @@ ORDER BY total_revenue DESC
 
 # Step 4: Check database directly
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 SELECT * FROM stalls WHERE name='Test Stall';
 ```
 
@@ -272,7 +272,7 @@ SELECT * FROM stalls WHERE name='Test Stall';
 
 # Step 3: Verify database
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 SELECT name, price FROM menu_items WHERE name='Chicken Rice';
 # Should show: Chicken Rice|4.50
 ```
@@ -297,7 +297,7 @@ SELECT name, price FROM menu_items WHERE name='Chicken Rice';
 
 # Step 4: Verify database
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 SELECT order_number, status FROM orders WHERE order_number='ORD-20250925-001';
 # Should show: ORD-20250925-001|preparing
 ```
@@ -493,7 +493,7 @@ The admin panel is optimized for desktop use but includes responsive design:
 **Solution:**
 1. Check browser console for API errors
 2. Verify backend is running (http://localhost:8000/health)
-3. Check database file exists: `backend/ntu_food.db`
+3. Check database file exists: `backend/campuseats.db`
 4. Refresh student app (Ctrl+F5)
 
 ### Issue: "Admin access required" error
@@ -504,7 +504,7 @@ The admin panel is optimized for desktop use but includes responsive design:
 3. Re-login at `/admin/login`
 4. Verify user role in database:
    ```sql
-   SELECT role FROM users WHERE ntu_email='admin@ntu.edu.sg';
+   SELECT role FROM users WHERE ntu_email='admin@campuseats.com';
    ```
 
 ### Issue: Database locked error
@@ -520,7 +520,7 @@ The admin panel is optimized for desktop use but includes responsive design:
 
 - **Backend API Docs:** http://localhost:8000/docs
 - **ReDoc:** http://localhost:8000/redoc
-- **Database File:** `backend/ntu_food.db`
+- **Database File:** `backend/campuseats.db`
 - **Admin Panel:** http://localhost:5173/admin/login
 - **Student App:** http://localhost:5173/login
 
@@ -528,7 +528,7 @@ The admin panel is optimized for desktop use but includes responsive design:
 
 ## ✨ Summary
 
-The NTU Food Admin Panel provides:
+The CampusEats Admin Panel provides:
 
 ✅ **Full Database Persistence** - All changes write directly to SQLite
 ✅ **Real-time Synchronization** - Students see changes immediately

@@ -24,13 +24,13 @@ async def lifespan(app: FastAPI):
     from app.models import user, stall, menu, order, queue, otp, review
     # Create tables
     Base.metadata.create_all(bind=engine)
-    logger.info(f"NTU Food API started in {settings.ENVIRONMENT} mode")
+    logger.info(f"CampusEats API started in {settings.ENVIRONMENT} mode")
     yield
-    logger.info("NTU Food API shutting down")
+    logger.info("CampusEats API shutting down")
 
 app = FastAPI(
-    title="NTU Food API",
-    description="Backend API for NTU Food Ordering System",
+    title="CampusEats API",
+    description="Backend API for CampusEats Ordering System",
     version="0.1.0",
     lifespan=lifespan
 )
@@ -86,7 +86,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 @app.get("/")
 async def root():
     return {
-        "message": "Welcome to NTU Food API",
+        "message": "Welcome to CampusEats API",
         "version": "0.1.0",
         "docs": "/docs",
         "redoc": "/redoc"

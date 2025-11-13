@@ -7,12 +7,12 @@ from datetime import datetime, timedelta
 BASE_URL = "http://localhost:8000"
 
 def test_complete_order_flow():
-    print("🚀 Testing Complete NTU Food Order Flow")
+    print("🚀 Testing Complete CampusEats Order Flow")
     print("=" * 60)
 
     # Test credentials
     test_student = {
-        "ntu_email": "test.new.student@e.ntu.edu.sg",
+        "ntu_email": "test.new.student@campuseats.com",
         "student_id": "U2024001A",
         "name": "Test New Student",
         "phone": "+6591234567",

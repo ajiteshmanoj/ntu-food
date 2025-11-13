@@ -17,10 +17,10 @@ def create_additional_stalls():
 
     try:
         # Get admin user to assign as owner (optional)
-        admin_user = db.query(User).filter(User.ntu_email == "admin@ntu.edu.sg").first()
+        admin_user = db.query(User).filter(User.ntu_email == "admin@campuseats.com").first()
         owner_id = admin_user.id if admin_user else None
 
-        print("\n🏪 Creating Additional NTU Food Stalls for Location Testing...\n")
+        print("\n🏪 Creating Additional CampusEats Stalls for Location Testing...\n")
 
         # ==================== STALL 4: Canteen 2 ====================
         stall4 = Stall(

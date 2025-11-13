@@ -31,10 +31,10 @@ def seed_database():
         # =====================================================
         print("📝 Creating admin user...")
 
-        existing_admin = db.query(User).filter(User.ntu_email == "admin@ntu.edu.sg").first()
+        existing_admin = db.query(User).filter(User.ntu_email == "admin@campuseats.com").first()
         if not existing_admin:
             admin = User(
-                ntu_email="admin@ntu.edu.sg",
+                ntu_email="admin@campuseats.com",
                 student_id="ADMIN001",
                 name="System Administrator",
                 phone="+65 12345678",
@@ -55,7 +55,7 @@ def seed_database():
 
         test_students = [
             {
-                "ntu_email": "test.student@e.ntu.edu.sg",
+                "ntu_email": "test.student@campuseats.com",
                 "student_id": "U2234567A",
                 "name": "Test Student",
                 "phone": "+65 91234567",
@@ -63,7 +63,7 @@ def seed_database():
                 "dietary_preferences": "No preferences"
             },
             {
-                "ntu_email": "john.doe@e.ntu.edu.sg",
+                "ntu_email": "john.doe@campuseats.com",
                 "student_id": "U2234568B",
                 "name": "John Doe",
                 "phone": "+65 91234568",
@@ -71,7 +71,7 @@ def seed_database():
                 "dietary_preferences": "Vegetarian"
             },
             {
-                "ntu_email": "jane.smith@e.ntu.edu.sg",
+                "ntu_email": "jane.smith@campuseats.com",
                 "student_id": "U2234569C",
                 "name": "Jane Smith",
                 "phone": "+65 91234569",
@@ -370,7 +370,7 @@ def seed_database():
 
         print("\n🔐 LOGIN CREDENTIALS:")
         print("\n   ADMIN:")
-        print("   Email: admin@ntu.edu.sg")
+        print("   Email: admin@campuseats.com")
         print("   Password: admin123")
 
         print("\n   TEST STUDENTS:")

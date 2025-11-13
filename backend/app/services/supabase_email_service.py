@@ -1,5 +1,5 @@
 """
-Supabase Auth Email Service for NTU Food App
+Supabase Auth Email Service for CampusEats App
 Handles OTP email sending via Supabase Auth API
 """
 import os
@@ -20,7 +20,7 @@ class SupabaseEmailService:
         """Initialize Supabase client"""
         self.supabase_url = settings.SUPABASE_URL
         self.supabase_key = settings.SUPABASE_KEY
-        self.app_name = "NTU Food"
+        self.app_name = "CampusEats"
         self.app_url = settings.FRONTEND_URL
         self.client: Optional[Client] = None
 

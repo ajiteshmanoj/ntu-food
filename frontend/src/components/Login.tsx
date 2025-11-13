@@ -52,10 +52,10 @@ const Login = () => {
               🍽️
             </div>
             <h1 className="text-4xl font-bold mb-4 drop-shadow-md max-[480px]:text-3xl">
-              NTU Food
+              CampusEats
             </h1>
             <p className="text-xl opacity-90 mb-8 leading-relaxed">
-              Smart food ordering for Nanyang Technological University students
+              Smart food ordering for university students
             </p>
             <ul className="list-none p-0 m-0">
               <li className="flex items-center mb-4 text-lg opacity-90 before:content-['✓'] before:bg-white/20 before:text-white before:w-6 before:h-6 before:rounded-full before:flex before:items-center before:justify-center before:mr-3 before:font-bold before:text-sm">
@@ -79,7 +79,7 @@ const Login = () => {
           <div className="max-w-[420px] w-full mx-auto max-[480px]:m-4 max-[480px]:p-8">
             <div className="text-center mb-12">
               <h1 className="text-blue-900 text-4xl font-extrabold m-0 mb-2 bg-gradient-to-br from-blue-900 to-blue-500 bg-clip-text text-transparent max-[480px]:text-3xl">
-                NTU Food
+                CampusEats
               </h1>
               <h2 className="text-slate-500 text-lg font-medium m-0">
                 Welcome back! Please sign in to your account
@@ -103,7 +103,7 @@ const Login = () => {
                   name="ntu_email"
                   value={formData.ntu_email}
                   onChange={handleChange}
-                  placeholder="your.name@e.ntu.edu.sg"
+                  placeholder="your.name@campuseats.com"
                   required
                   className="px-5 py-4 border-2 border-gray-200 rounded-xl text-base transition-all duration-200 bg-gray-50 min-h-[56px] focus:outline-none focus:border-blue-500 focus:bg-white focus:shadow-[0_0_0_4px_rgba(59,130,246,0.1)] focus:-translate-y-0.5 invalid:border-red-500 valid:border-green-500 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2 max-[480px]:px-4 max-[480px]:py-3.5"
                 />

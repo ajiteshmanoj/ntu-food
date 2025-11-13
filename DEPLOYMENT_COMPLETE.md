@@ -1,4 +1,4 @@
-# 🎉 NTU Food App - Deployment Complete!
+# 🎉 CampusEats App - Deployment Complete!
 
 **Your app is now LIVE on the web!**
 
@@ -8,9 +8,9 @@
 
 | Component | URL | Status |
 |-----------|-----|--------|
-| **Frontend** | https://ntu-food-xi.vercel.app | ✅ Live |
-| **Backend** | https://ntu-food-backend.onrender.com | ✅ Live |
-| **API Docs** | https://ntu-food-backend.onrender.com/docs | ✅ Live |
+| **Frontend** | https://campuseats-xi.vercel.app | ✅ Live |
+| **Backend** | https://campuseats-backend.onrender.com | ✅ Live |
+| **API Docs** | https://campuseats-backend.onrender.com/docs | ✅ Live |
 | **Database** | Supabase (dhmwuixxxsxkyfjdblqu) | ✅ Connected |
 
 ---
@@ -26,7 +26,7 @@ Your frontend can't talk to backend yet because CORS isn't configured.
    https://render.com/dashboard
    ```
 
-2. **Click on:** `ntu-food-backend`
+2. **Click on:** `campuseats-backend`
 
 3. **Go to:** Environment tab
 
@@ -34,15 +34,15 @@ Your frontend can't talk to backend yet because CORS isn't configured.
 
 5. **Update to this exact value:**
    ```
-   https://ntu-food-xi.vercel.app,http://localhost:5173
+   https://campuseats-xi.vercel.app,http://localhost:5173
    ```
 
    **Copy-paste this exactly - no trailing slashes, no spaces!**
 
 6. **Also update these (if they exist):**
    ```
-   FRONTEND_URL=https://ntu-food-xi.vercel.app
-   APP_URL=https://ntu-food-xi.vercel.app
+   FRONTEND_URL=https://campuseats-xi.vercel.app
+   APP_URL=https://campuseats-xi.vercel.app
    ```
 
 7. **Click "Save Changes"**
@@ -61,12 +61,12 @@ Once CORS is updated:
 
 ### 1. **Visit Your App:**
 ```
-https://ntu-food-xi.vercel.app
+https://campuseats-xi.vercel.app
 ```
 
 ### 2. **Login as Admin:**
 ```
-Email: admin@ntu.edu.sg
+Email: admin@campuseats.com
 Password: admin123
 ```
 
@@ -80,7 +80,7 @@ Password: admin123
 
 ### 4. **Test API Directly:**
 ```
-https://ntu-food-backend.onrender.com/api/stalls/
+https://campuseats-backend.onrender.com/api/stalls/
 ```
 
 ---
@@ -90,7 +90,7 @@ https://ntu-food-backend.onrender.com/api/stalls/
 Your live app has these accounts:
 
 **Admin:**
-- Email: `admin@ntu.edu.sg`
+- Email: `admin@campuseats.com`
 - Password: `admin123`
 - Access: Full admin dashboard
 
@@ -105,20 +105,20 @@ Your live app has these accounts:
 ### Backend Checks:
 ```bash
 # Health check
-curl https://ntu-food-backend.onrender.com/health
+curl https://campuseats-backend.onrender.com/health
 # Should return: {"status":"healthy"}
 
 # Stalls endpoint
-curl https://ntu-food-backend.onrender.com/api/stalls/
+curl https://campuseats-backend.onrender.com/api/stalls/
 # Should return: JSON array of 17 stalls
 
 # API Documentation
-open https://ntu-food-backend.onrender.com/docs
+open https://campuseats-backend.onrender.com/docs
 # Should show: FastAPI interactive docs
 ```
 
 ### Frontend Checks:
-1. Visit: https://ntu-food-xi.vercel.app
+1. Visit: https://campuseats-xi.vercel.app
 2. Page loads without errors ✅
 3. Can see login form ✅
 4. Browser console has no CORS errors ✅
@@ -137,7 +137,7 @@ open https://ntu-food-backend.onrender.com/docs
 - Console shows: "Access to fetch... has been blocked by CORS policy"
 
 **Fix:**
-1. Check CORS_ORIGINS in Render is exact: `https://ntu-food-xi.vercel.app`
+1. Check CORS_ORIGINS in Render is exact: `https://campuseats-xi.vercel.app`
 2. Make sure you clicked "Manual Deploy" after changing it
 3. Wait for deploy to complete (2 minutes)
 4. Hard refresh browser: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
@@ -155,11 +155,11 @@ open https://ntu-food-backend.onrender.com/docs
 1. **Vercel Environment Variable:**
    - Go to: https://vercel.com/dashboard
    - Your project → Settings → Environment Variables
-   - Verify: `VITE_API_URL=https://ntu-food-backend.onrender.com`
+   - Verify: `VITE_API_URL=https://campuseats-backend.onrender.com`
    - If missing or wrong: Add/fix it, then redeploy
 
 2. **Backend is running:**
-   - Visit: https://ntu-food-backend.onrender.com/health
+   - Visit: https://campuseats-backend.onrender.com/health
    - Should return: `{"status":"healthy"}`
    - If not: Check Render logs for errors
 
@@ -168,7 +168,7 @@ open https://ntu-food-backend.onrender.com/docs
 ### Issue: Backend shows "Not Found" or error 500
 
 **Check Render Logs:**
-1. Render Dashboard → ntu-food-backend
+1. Render Dashboard → campuseats-backend
 2. Logs tab
 3. Look for Python errors
 
@@ -184,7 +184,7 @@ open https://ntu-food-backend.onrender.com/docs
 **Possible causes:**
 1. **Database not seeded:**
    - Admin account doesn't exist
-   - Check Supabase: Table Editor → users → Look for admin@ntu.edu.sg
+   - Check Supabase: Table Editor → users → Look for admin@campuseats.com
 
 2. **Wrong password:**
    - Default is: `admin123`
@@ -290,7 +290,7 @@ All on free tiers:
 ### Keep Render Awake:
 Use a cron service to ping every 14 minutes:
 - Service: cron-job.org (free)
-- URL: https://ntu-food-backend.onrender.com/health
+- URL: https://campuseats-backend.onrender.com/health
 - Interval: Every 14 minutes
 
 ### Keep Supabase Active:
@@ -306,7 +306,7 @@ Your app is now accessible from anywhere!
 
 **Share this URL:**
 ```
-https://ntu-food-xi.vercel.app
+https://campuseats-xi.vercel.app
 ```
 
 **Features students can use:**
@@ -336,7 +336,7 @@ A complete, production-ready food ordering system with:
 - ✅ Admin dashboard
 
 ### Features:
-- ✅ 17 real NTU eateries with GPS
+- ✅ 17 real campus eateries with GPS
 - ✅ 28+ menu items
 - ✅ Complete order flow (cart → checkout → tracking)
 - ✅ Virtual queue system
@@ -359,9 +359,9 @@ A complete, production-ready food ordering system with:
 You now have a **live, functional, production-ready** food ordering application!
 
 **Your URLs:**
-- Frontend: https://ntu-food-xi.vercel.app
-- Backend: https://ntu-food-backend.onrender.com
-- GitHub: https://github.com/ajiteshmanoj/ntu-food
+- Frontend: https://campuseats-xi.vercel.app
+- Backend: https://campuseats-backend.onrender.com
+- GitHub: https://github.com/ajiteshmanoj/campuseats
 
 Students can now access it from anywhere in the world! 🌍
 
@@ -389,12 +389,12 @@ git push
 
 **Check Backend Logs:**
 ```
-https://render.com/dashboard → ntu-food-backend → Logs
+https://render.com/dashboard → campuseats-backend → Logs
 ```
 
 **Check Frontend Deployment:**
 ```
-https://vercel.com/dashboard → ntu-food → Deployments
+https://vercel.com/dashboard → campuseats → Deployments
 ```
 
 **Manage Database:**
@@ -406,4 +406,4 @@ https://supabase.com/dashboard/project/dhmwuixxxsxkyfjdblqu
 
 **Status:** ✅ **DEPLOYMENT COMPLETE!**
 
-Your NTU Food app is now live and accessible to anyone! 🚀🎉
+Your CampusEats app is now live and accessible to anyone! 🚀🎉

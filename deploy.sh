@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# NTU Food - Quick Deployment Helper Script
+# CampusEats - Quick Deployment Helper Script
 # This script helps you push code to GitHub for deployment
 
 echo "========================================"
-echo "  NTU Food - Deployment Helper"
+echo "  CampusEats - Deployment Helper"
 echo "========================================"
 echo ""
 
@@ -36,7 +36,7 @@ echo "Enter commit message (or press Enter for default):"
 read -r COMMIT_MSG
 
 if [ -z "$COMMIT_MSG" ]; then
-    COMMIT_MSG="Deploy: Update NTU Food app with latest changes
+    COMMIT_MSG="Deploy: Update CampusEats app with latest changes
 
 - Backend updates with Supabase connection
 - Frontend improvements
@@ -106,7 +106,7 @@ echo "📝 Next Steps:"
 echo ""
 echo "  Backend Deployment (Render.com):"
 echo "    1. Visit: https://render.com/dashboard"
-echo "    2. Find or create 'ntu-food-backend' service"
+echo "    2. Find or create 'campuseats-backend' service"
 echo "    3. Set environment variables (DATABASE_URL, etc.)"
 echo "    4. Click 'Manual Deploy' to deploy latest code"
 echo ""

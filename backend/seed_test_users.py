@@ -23,7 +23,7 @@ def create_test_users():
         # Test student accounts
         test_users = [
             {
-                "ntu_email": "test.student@e.ntu.edu.sg",
+                "ntu_email": "test.student@campuseats.com",
                 "student_id": "U2021234A",
                 "name": "Test Student",
                 "phone": "+65 91234567",
@@ -32,7 +32,7 @@ def create_test_users():
                 "dietary_preferences": "No pork, no beef"
             },
             {
-                "ntu_email": "john.tan@e.ntu.edu.sg",
+                "ntu_email": "john.tan@campuseats.com",
                 "student_id": "U2022456B",
                 "name": "John Tan Wei Ming",
                 "phone": "+65 92345678",
@@ -41,7 +41,7 @@ def create_test_users():
                 "dietary_preferences": "Halal only"
             },
             {
-                "ntu_email": "alice.lim@e.ntu.edu.sg",
+                "ntu_email": "alice.lim@campuseats.com",
                 "student_id": "U2023789C",
                 "name": "Alice Lim Mei Ling",
                 "phone": "+65 93456789",
@@ -95,7 +95,7 @@ def create_test_users():
 
         print("\n" + "="*60)
         print("🔑 DEFAULT PASSWORD FOR ALL TEST ACCOUNTS:")
-        print("   testpassword123 (for test.student@e.ntu.edu.sg)")
+        print("   testpassword123 (for test.student@campuseats.com)")
         print("   password123 (for john.tan and alice.lim)")
         print("="*60)
         print("\n📱 Student App URL: http://localhost:5173/login")

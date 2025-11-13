@@ -52,7 +52,7 @@ const AdminLogin: React.FC = () => {
       <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] p-10 w-full max-w-[450px]">
         <div className="text-center mb-[30px]">
           <h1 className="text-[#667eea] m-0 mb-2.5 text-[32px]">🔐 Admin Portal</h1>
-          <p className="text-gray-600 m-0 text-base">NTU Food Management System</p>
+          <p className="text-gray-600 m-0 text-base">CampusEats Management System</p>
         </div>
 
         <form onSubmit={handleLogin} className="mb-6">
@@ -65,7 +65,7 @@ const AdminLogin: React.FC = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@ntu.edu.sg"
+              placeholder="admin@campuseats.com"
               required
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-[15px] transition-colors duration-300 box-border focus:outline-none focus:border-[#667eea]"
             />

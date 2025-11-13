@@ -1,4 +1,4 @@
-# 🚀 Redeploy NTU Food to Web (Vercel + Render)
+# 🚀 Redeploy CampusEats to Web (Vercel + Render)
 
 **Quick Guide:** Get your app back online in ~15 minutes
 
@@ -12,7 +12,7 @@
 ## 📋 Prerequisites Check
 
 ✅ **Already Complete:**
-- GitHub repo: https://github.com/ajiteshmanoj/ntu-food
+- GitHub repo: https://github.com/ajiteshmanoj/campuseats
 - Supabase connected and working
 - Vercel config file exists
 - Render config file exists
@@ -49,7 +49,7 @@ You have new changes that need to be pushed:
 ### Push Commands:
 
 ```bash
-cd /Users/ajitesh/Desktop/My\ Projects/NTU_Food/ntu-food
+cd /Users/ajitesh/Desktop/My\ Projects/NTU_Food/campuseats
 
 # Add all changes
 git add .
@@ -69,7 +69,7 @@ git push origin main
 ```
 
 **Verify Push:**
-Visit https://github.com/ajiteshmanoj/ntu-food and confirm latest commit shows up.
+Visit https://github.com/ajiteshmanoj/campuseats and confirm latest commit shows up.
 
 ---
 
@@ -83,7 +83,7 @@ Visit https://github.com/ajiteshmanoj/ntu-food and confirm latest commit shows u
    ```
 
 2. **Look for existing service:**
-   - Service name might be: `ntu-food-backend` or similar
+   - Service name might be: `campuseats-backend` or similar
    - If exists: Skip to "Update Existing Service" below
    - If not exists: Continue to "Create New Service"
 
@@ -95,12 +95,12 @@ Visit https://github.com/ajiteshmanoj/ntu-food and confirm latest commit shows u
 
 2. **Connect GitHub:**
    - Click "Connect account" if needed
-   - Select repository: `ajiteshmanoj/ntu-food`
+   - Select repository: `ajiteshmanoj/campuseats`
    - Click "Connect"
 
 3. **Configure Service:**
    ```
-   Name: ntu-food-backend
+   Name: campuseats-backend
    Region: Singapore (or closest to you)
    Branch: main
    Runtime: Python 3
@@ -148,8 +148,8 @@ REFRESH_TOKEN_EXPIRE_DAYS=7
 ENVIRONMENT=production
 
 # CORS (we'll update this after Vercel deployment)
-CORS_ORIGINS=http://localhost:5173,https://ntu-food.vercel.app
-FRONTEND_URL=https://ntu-food.vercel.app
+CORS_ORIGINS=http://localhost:5173,https://campuseats.vercel.app
+FRONTEND_URL=https://campuseats.vercel.app
 
 # Email
 EMAIL_TESTING_MODE=false
@@ -158,8 +158,8 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_EMAIL=ntufoodapp@gmail.com
 SMTP_PASSWORD=zjrcmdheyeopdlwy
-SMTP_FROM_NAME=NTU Food
-APP_URL=https://ntu-food.vercel.app
+SMTP_FROM_NAME=CampusEats
+APP_URL=https://campuseats.vercel.app
 ```
 
 **⚠️ SECURITY NOTE:**
@@ -179,7 +179,7 @@ openssl rand -hex 32
    - Should see "Live ✅" with green indicator
 
 6. **Copy your Render URL:**
-   - Looks like: `https://ntu-food-backend.onrender.com`
+   - Looks like: `https://campuseats-backend.onrender.com`
    - **Save this URL** - you'll need it for Vercel!
 
 7. **Test Backend:**
@@ -214,7 +214,7 @@ openssl rand -hex 32
    ```
 
 2. **Look for existing project:**
-   - Project name might be: `ntu-food` or `ntu-food-frontend`
+   - Project name might be: `campuseats` or `campuseats-frontend`
    - If exists: Skip to "Update Existing Project" below
    - If not exists: Continue to "Create New Project"
 
@@ -225,7 +225,7 @@ openssl rand -hex 32
 1. **Click "Add New..." → "Project"**
 
 2. **Import Git Repository:**
-   - Select `ajiteshmanoj/ntu-food`
+   - Select `ajiteshmanoj/campuseats`
    - Click "Import"
 
 3. **Configure Project:**
@@ -251,7 +251,7 @@ openssl rand -hex 32
 
 6. **Wait for deployment** (~2 minutes)
    - Should see "Congratulations!" when done
-   - Copy your Vercel URL (looks like: `https://ntu-food-xxxx.vercel.app`)
+   - Copy your Vercel URL (looks like: `https://campuseats-xxxx.vercel.app`)
 
 ---
 
@@ -301,10 +301,10 @@ After Vercel deployment, you need to update backend CORS:
    https://YOUR-VERCEL-URL.vercel.app
    ```
 
-2. **Should see:** NTU Food login page
+2. **Should see:** CampusEats login page
 
 3. **Try logging in:**
-   - Email: `admin@ntu.edu.sg`
+   - Email: `admin@campuseats.com`
    - Password: `admin123`
 
 4. **Should work:** Redirects to stalls page with 17 stalls
@@ -395,7 +395,7 @@ Once deployed, bookmark these:
 📚 API Docs:     https://YOUR-RENDER-URL.onrender.com/docs
 👤 Admin Login:  https://YOUR-VERCEL-URL.vercel.app/admin/login
 💾 Database:     https://supabase.com/dashboard/project/dhmwuixxxsxkyfjdblqu
-📂 GitHub:       https://github.com/ajiteshmanoj/ntu-food
+📂 GitHub:       https://github.com/ajiteshmanoj/campuseats
 ```
 
 ---
@@ -575,4 +575,4 @@ Before considering deployment complete:
 
 **Ready to deploy? Start with Step 1!** 🚀
 
-After deployment, share your Vercel URL and your NTU Food app will be live on the web!
+After deployment, share your Vercel URL and your CampusEats app will be live on the web!

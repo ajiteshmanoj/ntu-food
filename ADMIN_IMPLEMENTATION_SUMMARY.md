@@ -104,7 +104,7 @@ A **comprehensive, production-ready admin dashboard** with full database persist
 ### Database & Scripts
 
 1. **seed_admin.py** - Admin account creation script
-   - Creates default admin: `admin@ntu.edu.sg` / `admin123`
+   - Creates default admin: `admin@campuseats.com` / `admin123`
    - Checks for existing admin
    - Secure password hashing
 
@@ -258,7 +258,7 @@ const stalls = await api.get('/api/stalls/');  // ← SELECT * FROM stalls
 # Create something in admin panel
 # Then check database directly:
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 SELECT * FROM stalls;
 SELECT * FROM menu_items;
 SELECT * FROM orders;

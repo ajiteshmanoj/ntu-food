@@ -41,25 +41,25 @@ const AllAccounts: React.FC = () => {
   // Test credentials for development
   const testCredentials: TestCredentials[] = [
     {
-      email: 'admin@ntu.edu.sg',
+      email: 'admin@campuseats.com',
       password: 'admin123',
       role: 'Admin',
       name: 'System Administrator'
     },
     {
-      email: 'test.student@e.ntu.edu.sg',
+      email: 'test.student@campuseats.com',
       password: 'testpassword123',
       role: 'Student',
       name: 'Test Student'
     },
     {
-      email: 'john.tan@e.ntu.edu.sg',
+      email: 'john.tan@campuseats.com',
       password: 'password123',
       role: 'Student',
       name: 'John Tan Wei Ming'
     },
     {
-      email: 'alice.lim@e.ntu.edu.sg',
+      email: 'alice.lim@campuseats.com',
       password: 'password123',
       role: 'Student',
       name: 'Alice Lim Mei Ling'
@@ -206,7 +206,7 @@ const AllAccounts: React.FC = () => {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `ntu-food-accounts-${new Date().toISOString().split('T')[0]}.csv`;
+    a.download = `campuseats-accounts-${new Date().toISOString().split('T')[0]}.csv`;
     a.click();
     window.URL.revokeObjectURL(url);
   };

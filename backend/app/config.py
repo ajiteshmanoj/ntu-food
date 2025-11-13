@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     # Database Configuration (supports both SQLite and PostgreSQL/Supabase)
-    DATABASE_URL: str = "sqlite:///./ntu_food.db"
+    DATABASE_URL: str = "sqlite:///./campuseats.db"
 
     # Supabase Configuration (optional, for future Supabase Auth integration)
     SUPABASE_URL: Optional[str] = None
@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     SMTP_PORT: int = 587
     SMTP_EMAIL: str = ""
     SMTP_PASSWORD: str = ""
-    SMTP_FROM_NAME: str = "NTU Food"
+    SMTP_FROM_NAME: str = "CampusEats"
     APP_URL: str = "http://localhost:5173"
 
     class Config:

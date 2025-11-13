@@ -1,16 +1,16 @@
-# 📧 Gmail SMTP Setup Guide for NTU Food App
+# 📧 Gmail SMTP Setup Guide for CampusEats App
 
-Complete guide to configure Gmail SMTP for sending real OTP emails in your NTU Food application.
+Complete guide to configure Gmail SMTP for sending real OTP emails in your CampusEats application.
 
 ---
 
 ## 🎯 Overview
 
-Your NTU Food app now uses **Gmail SMTP** to send professional, branded OTP verification emails. This guide will help you set up Gmail App Passwords for secure email sending.
+Your CampusEats app now uses **Gmail SMTP** to send professional, branded OTP verification emails. This guide will help you set up Gmail App Passwords for secure email sending.
 
 **Features Implemented:**
 - ✅ Gmail SMTP with TLS encryption
-- ✅ Professional HTML email templates with NTU Food branding
+- ✅ Professional HTML email templates with CampusEats branding
 - ✅ Automatic retry on failure (up to 2 attempts)
 - ✅ Rate limiting (max 3 emails per 5 minutes per address)
 - ✅ Error handling and logging
@@ -69,7 +69,7 @@ Or manually:
 
 1. You may be asked to sign in again - enter your Gmail password
 2. On the App Passwords page:
-   - **App name:** Enter `NTU Food` or `NTU Food OTP Emails`
+   - **App name:** Enter `CampusEats` or `CampusEats OTP Emails`
    - Click **"Create"**
 
 3. **Copy the 16-character password** displayed on screen
@@ -83,7 +83,7 @@ Or manually:
 
 ---
 
-## ⚙️ Step 3: Configure NTU Food Backend
+## ⚙️ Step 3: Configure CampusEats Backend
 
 ### 3.1 Update `.env` File
 
@@ -104,7 +104,7 @@ Or manually:
    SMTP_PORT=587
    SMTP_EMAIL=your-gmail@gmail.com  # Replace with your Gmail address
    SMTP_PASSWORD=abcd efgh ijkl mnop  # Replace with your 16-character App Password
-   SMTP_FROM_NAME=NTU Food
+   SMTP_FROM_NAME=CampusEats
    APP_URL=http://localhost:5173
    ```
 
@@ -127,7 +127,7 @@ python3 -m uvicorn app.main:app --reload
 
 ### 4.1 Test Registration with Real Email
 
-1. Open your NTU Food app: **http://localhost:5173/register**
+1. Open your CampusEats app: **http://localhost:5173/register**
 
 2. Fill in the registration form with **a real email you can access**:
    - Name: Your name
@@ -145,13 +145,13 @@ python3 -m uvicorn app.main:app --reload
 
 5. **Check your email inbox** (and spam folder!)
 
-6. You should receive a professional NTU Food branded email with your OTP
+6. You should receive a professional CampusEats branded email with your OTP
 
 ### 4.2 Verify the Email
 
 1. Open the email
 2. You should see:
-   - NTU Food header with logo
+   - CampusEats header with logo
    - Your name
    - 6-digit OTP code in a prominent box
    - Expiry notice (10 minutes)
@@ -174,7 +174,7 @@ Your OTP emails now include:
 
 **Design:**
 - Responsive design (looks great on mobile and desktop)
-- NTU Food gradient header (blue to orange)
+- CampusEats gradient header (blue to orange)
 - Large, readable OTP code
 - Professional typography
 
@@ -184,7 +184,7 @@ Your OTP emails now include:
 - TLS encryption during sending
 
 **Branding:**
-- NTU Food logo (🍽️)
+- CampusEats logo (🍽️)
 - Consistent color scheme
 - Professional footer with NTU info
 
@@ -337,7 +337,7 @@ Update your production `.env`:
 EMAIL_TESTING_MODE=false
 SMTP_EMAIL=your-production-gmail@gmail.com
 SMTP_PASSWORD=your-production-app-password
-SMTP_FROM_NAME=NTU Food
+SMTP_FROM_NAME=CampusEats
 APP_URL=https://your-production-domain.com
 ```
 
@@ -441,7 +441,7 @@ You'll know it's working when:
 
 ✅ Backend logs show: `✅ OTP email sent successfully to...`
 ✅ Email appears in recipient's inbox (or spam folder)
-✅ Email has professional NTU Food branding
+✅ Email has professional CampusEats branding
 ✅ OTP code is displayed prominently
 ✅ Email is mobile-responsive
 ✅ OTP verification works correctly
@@ -463,4 +463,4 @@ If you encounter issues:
 
 **Ready to send emails!** 🚀
 
-Follow the steps above to configure Gmail SMTP and start sending professional OTP emails to your NTU Food users.
+Follow the steps above to configure Gmail SMTP and start sending professional OTP emails to your CampusEats users.

@@ -1,4 +1,4 @@
-# 🔍 Supabase Status Report - NTU Food App
+# 🔍 Supabase Status Report - CampusEats App
 
 **Date:** 2025-11-13
 **Status:** ❌ DISCONNECTED (Using SQLite Fallback)
@@ -62,7 +62,7 @@ Based on your configuration files:
 
 Change this line:
 ```env
-DATABASE_URL=sqlite:///./ntu_food.db
+DATABASE_URL=sqlite:///./campuseats.db
 ```
 
 To this (uncomment the Supabase line):

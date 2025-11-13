@@ -1,5 +1,5 @@
 """
-Gmail SMTP Email Service for NTU Food App
+Gmail SMTP Email Service for CampusEats App
 Handles OTP and welcome email sending via Gmail SMTP
 """
 import smtplib
@@ -28,10 +28,10 @@ class EmailService:
         self.smtp_port = int(os.getenv('SMTP_PORT', '587'))
         self.smtp_email = os.getenv('SMTP_EMAIL', '')
         self.smtp_password = os.getenv('SMTP_PASSWORD', '')
-        self.smtp_from_name = os.getenv('SMTP_FROM_NAME', 'NTU Food')
+        self.smtp_from_name = os.getenv('SMTP_FROM_NAME', 'CampusEats')
 
         # Application settings
-        self.app_name = "NTU Food"
+        self.app_name = "CampusEats"
         self.app_url = os.getenv('APP_URL', 'http://localhost:5173')
 
         # Email testing mode
@@ -281,7 +281,7 @@ class EmailService:
                                 <tr>
                                     <td style="background-color: #f1f5f9; border-left: 5px solid #64748b; padding: 20px; border-radius: 8px;">
                                         <p style="margin: 0; color: #475569; font-size: 14px; line-height: 1.6;">
-                                            <strong style="font-size: 18px;">🔒</strong> <strong>Security Notice:</strong> If you didn't request this verification code, please ignore this email. Never share your OTP with anyone, including NTU Food staff.
+                                            <strong style="font-size: 18px;">🔒</strong> <strong>Security Notice:</strong> If you didn't request this verification code, please ignore this email. Never share your OTP with anyone, including CampusEats staff.
                                         </p>
                                     </td>
                                 </tr>
@@ -424,7 +424,7 @@ This is an automated email. Please do not reply.
                             </h2>
 
                             <p style="margin: 0 0 24px 0; color: #475569; font-size: 17px; line-height: 1.7;">
-                                Your account has been successfully verified. You're now part of the NTU Food community! 🎊
+                                Your account has been successfully verified. You're now part of the CampusEats community! 🎊
                             </p>
 
                             <h3 style="margin: 32px 0 20px 0; color: #1e3a8a; font-size: 22px; font-weight: 700;">
@@ -500,7 +500,7 @@ Welcome to {self.app_name}!
 Hello {user_name}!
 
 Your account has been successfully verified. You're now part of the
-NTU Food community!
+CampusEats community!
 
 What you can do now:
 • Browse all available food stalls on campus

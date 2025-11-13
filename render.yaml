@@ -1,7 +1,7 @@
 services:
   # Backend API Service
   - type: web
-    name: ntu-food-backend
+    name: campuseats-backend
     runtime: python
     plan: free
     rootDir: backend
@@ -64,7 +64,7 @@ services:
         sync: false  # Set manually - Gmail App Password
 
       - key: SMTP_FROM_NAME
-        value: NTU Food
+        value: CampusEats
 
       - key: APP_URL
         sync: false  # Set to Vercel URL after deployment

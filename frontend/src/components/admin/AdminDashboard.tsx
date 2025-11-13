@@ -63,7 +63,7 @@ const AdminDashboard: React.FC = () => {
     <div className="admin-dashboard">
       <nav className="admin-nav">
         <div className="admin-nav-brand">
-          <h1>🍽️ NTU Food Admin</h1>
+          <h1>🍽️ CampusEats Admin</h1>
         </div>
         <div className="admin-nav-user">
           <span>Welcome, {adminUser.name}</span>

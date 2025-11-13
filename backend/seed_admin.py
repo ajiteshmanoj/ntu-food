@@ -18,7 +18,7 @@ def create_admin_user():
             return
 
         admin = User(
-            ntu_email="admin@ntu.edu.sg",
+            ntu_email="admin@campuseats.com",
             student_id="ADMIN001",
             name="System Administrator",
             phone="+65 12345678",
@@ -35,7 +35,7 @@ def create_admin_user():
         print("\n" + "="*50)
         print("ADMIN LOGIN CREDENTIALS")
         print("="*50)
-        print(f"Email: admin@ntu.edu.sg")
+        print(f"Email: admin@campuseats.com")
         print(f"Password: admin123")
         print("="*50)
         print("\n⚠️  IMPORTANT: Change this password after first login!")

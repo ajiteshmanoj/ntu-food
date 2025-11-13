@@ -33,7 +33,7 @@ def init_database():
 
 def create_test_data(session):
     test_user = User(
-        ntu_email="test.student@e.ntu.edu.sg",
+        ntu_email="test.student@campuseats.com",
         student_id="U123456789",
         name="Test Student",
         phone="+65 91234567",
@@ -46,7 +46,7 @@ def create_test_data(session):
     session.flush()
 
     stall_owner = User(
-        ntu_email="stallowner@e.ntu.edu.sg",
+        ntu_email="stallowner@campuseats.com",
         student_id="S987654321",
         name="Test Stall Owner",
         phone="+65 98765432",

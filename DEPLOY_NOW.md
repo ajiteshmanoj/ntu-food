@@ -27,7 +27,7 @@ All deployment files have been configured:
 **Create Database:**
 1. Go to https://supabase.com (free, no credit card)
 2. Sign up → **New Project**
-3. Name: `ntu-food-db`
+3. Name: `campuseats-db`
 4. Password: **Choose strong password & save it!**
 5. Region: Southeast Asia (or closest)
 6. Wait 2-3 min for setup
@@ -54,9 +54,9 @@ git push origin main
 
 # If no GitHub repo yet:
 # 1. Create repo on GitHub: https://github.com/new
-# 2. Name it: ntu-food
+# 2. Name it: campuseats
 # 3. Run:
-git remote add origin https://github.com/YOUR_USERNAME/ntu-food.git
+git remote add origin https://github.com/YOUR_USERNAME/campuseats.git
 git branch -M main
 git push -u origin main
 ```
@@ -72,9 +72,9 @@ git push -u origin main
 
 **Deploy Service:**
 1. **New +** → **Web Service**
-2. Connect GitHub → Select `ntu-food` repo
+2. Connect GitHub → Select `campuseats` repo
 3. Configure:
-   - Name: `ntu-food-backend`
+   - Name: `campuseats-backend`
    - Plan: **FREE**
    - Build: `pip install -r backend/requirements.txt`
    - Start: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
@@ -98,7 +98,7 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_EMAIL=your-gmail@gmail.com
 SMTP_PASSWORD=<Gmail App Password - see below>
-SMTP_FROM_NAME=NTU Food
+SMTP_FROM_NAME=CampusEats
 
 # CORS (temporary - update after Vercel)
 CORS_ORIGINS=http://localhost:5173
@@ -106,14 +106,14 @@ CORS_ORIGINS=http://localhost:5173
 
 **Get Gmail App Password:**
 1. https://myaccount.google.com/apppasswords
-2. App: Mail | Device: Other ("NTU Food")
+2. App: Mail | Device: Other ("CampusEats")
 3. Generate → Copy 16-char password
 4. Use as `SMTP_PASSWORD` (remove spaces)
 
 **Deploy:**
 - Click **"Create Web Service"**
 - Wait 5-7 min
-- Copy your URL: `https://ntu-food-backend.onrender.com`
+- Copy your URL: `https://campuseats-backend.onrender.com`
 - Test: Visit `/health` - should return `{"status":"healthy"}`
 
 ---
@@ -126,7 +126,7 @@ CORS_ORIGINS=http://localhost:5173
 
 **Deploy:**
 1. **Add New** → **Project**
-2. Import `ntu-food` repository
+2. Import `campuseats` repository
 3. Configure:
    - Framework: Vite (auto-detected)
    - **Root Directory:** `frontend` ⚠️ Important!
@@ -136,23 +136,23 @@ CORS_ORIGINS=http://localhost:5173
 **Add Environment Variable:**
 1. Before deploying, add:
    - Name: `VITE_API_URL`
-   - Value: `https://ntu-food-backend.onrender.com` (your Render URL)
+   - Value: `https://campuseats-backend.onrender.com` (your Render URL)
    - Environment: All (Production, Preview, Development)
 
 2. Click **Deploy**
 3. Wait 2-3 min
-4. Copy your Vercel URL: `https://ntu-food.vercel.app`
+4. Copy your Vercel URL: `https://campuseats.vercel.app`
 
 ---
 
 ### 5️⃣ Update CORS (2 min)
 
 **Update Render:**
-1. Render Dashboard → `ntu-food-backend`
+1. Render Dashboard → `campuseats-backend`
 2. Environment → Find `CORS_ORIGINS`
 3. Edit value:
    ```
-   https://ntu-food.vercel.app,https://ntu-food-*.vercel.app,http://localhost:5173
+   https://campuseats.vercel.app,https://campuseats-*.vercel.app,http://localhost:5173
    ```
 4. Save → Wait 1-2 min for auto-redeploy
 
@@ -174,7 +174,7 @@ CORS_ORIGINS=http://localhost:5173
 Visit: `https://your-backend.onrender.com/api/admin/seed-admin`
 
 Login with:
-- Email: `admin@ntu.edu.sg`
+- Email: `admin@campuseats.com`
 - Password: `admin123`
 - ⚠️ Change password immediately!
 

@@ -9,7 +9,7 @@
 
 ### Login Test
 - [ ] Navigate to http://localhost:5173/admin/login
-- [ ] Enter email: `admin@ntu.edu.sg`
+- [ ] Enter email: `admin@campuseats.com`
 - [ ] Enter password: `admin123`
 - [ ] Click "Login to Admin Panel"
 - [ ] ✅ Should redirect to /admin/dashboard
@@ -92,7 +92,7 @@
 
 ### Verify Student Sees New Stall
 - [ ] Open new tab: http://localhost:5173/login
-- [ ] Login as student: `test.student@e.ntu.edu.sg` / `testpassword123`
+- [ ] Login as student: `test.student@campuseats.com` / `testpassword123`
 - [ ] Browse stalls
 - [ ] ✅ "Test Food Court" appears in stall list!
 
@@ -283,7 +283,7 @@
 ### Test 3: Direct Database Check
 ```bash
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 SELECT * FROM stalls WHERE name LIKE '%Test%';
 SELECT * FROM menu_items WHERE name LIKE '%Test%';
 SELECT * FROM users WHERE role='admin';
@@ -354,7 +354,7 @@ SELECT * FROM users WHERE role='admin';
 ### Dashboard Stats Match Database
 ```bash
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 
 # Count users
 SELECT COUNT(*) FROM users;

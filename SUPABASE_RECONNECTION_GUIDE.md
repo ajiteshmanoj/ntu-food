@@ -1,4 +1,4 @@
-# 🔧 Supabase Reconnection Guide - NTU Food App
+# 🔧 Supabase Reconnection Guide - CampusEats App
 
 **Problem:** You previously deployed to Supabase but can no longer access it.
 **Solution:** This guide will help you reconnect to your existing Supabase project or set up a new one.
@@ -25,7 +25,7 @@ Based on your project files, here's what I found:
 ### 🔍 Current Database Setup
 **File:** `backend/.env` (Line 8)
 ```env
-DATABASE_URL=sqlite:///./ntu_food.db  # ← Currently using local SQLite
+DATABASE_URL=sqlite:///./campuseats.db  # ← Currently using local SQLite
 ```
 
 **Previous Supabase URL (commented out):**
@@ -56,7 +56,7 @@ You have **TWO options**:
 2. **Sign in** with the account you used previously
 
 3. **Look for your project:**
-   - Project name might be: `ntu-food` or similar
+   - Project name might be: `campuseats` or similar
    - Project reference: `dhmwuixxxsxkyfjdblqu`
 
 4. **Check project status:**
@@ -196,7 +196,7 @@ If your old project is deleted or you want a fresh start:
 2. **Sign in** or create account (100% free, no credit card)
 3. Click **"New Project"**
 4. Fill in:
-   - **Name:** `ntu-food-production` (or any name)
+   - **Name:** `campuseats-production` (or any name)
    - **Database Password:** Choose strong password (SAVE IT!)
    - **Region:** Singapore / Southeast Asia (closest to you)
 5. Click **"Create new project"**
@@ -275,9 +275,9 @@ SEEDING SUPABASE DATABASE
    ✓ Admin user created
 
 📝 Creating test student accounts...
-   ✓ Created: Test Student (test.student@e.ntu.edu.sg)
-   ✓ Created: John Doe (john.doe@e.ntu.edu.sg)
-   ✓ Created: Jane Smith (jane.smith@e.ntu.edu.sg)
+   ✓ Created: Test Student (test.student@campuseats.com)
+   ✓ Created: John Doe (john.doe@campuseats.com)
+   ✓ Created: Jane Smith (jane.smith@campuseats.com)
 
 📝 Creating food stalls...
    ✓ Created: Western Food Paradise
@@ -377,7 +377,7 @@ DATABASE_URL=postgresql://postgres...
 
 **NOT:**
 ```
-DATABASE_URL=sqlite:///./ntu_food.db  # ← Wrong!
+DATABASE_URL=sqlite:///./campuseats.db  # ← Wrong!
 ```
 
 ### Issue 6: Supabase project deleted/can't find it
@@ -446,7 +446,7 @@ cd frontend
 npm run dev
 
 # Visit: http://localhost:5173
-# Login with: admin@ntu.edu.sg / admin123
+# Login with: admin@campuseats.com / admin123
 ```
 
 ---
@@ -473,11 +473,11 @@ postgresql://postgres.PROJECT_REF:[PASSWORD]@aws-X-region.pooler.supabase.com:65
 ### Test Accounts (after seeding)
 ```
 Admin:
-  Email: admin@ntu.edu.sg
+  Email: admin@campuseats.com
   Password: admin123
 
 Student:
-  Email: test.student@e.ntu.edu.sg
+  Email: test.student@campuseats.com
   Password: testpassword123
 ```
 

@@ -19,7 +19,7 @@
 3. **Click on "users" table**
 
 4. **Check if admin exists:**
-   - Look for email: `admin@ntu.edu.sg`
+   - Look for email: `admin@campuseats.com`
    - **If exists:** Skip to Option 2 (password issue)
    - **If NOT exists:** Continue below
 
@@ -27,7 +27,7 @@
 
 6. **Fill in these fields:**
    ```
-   ntu_email: admin@ntu.edu.sg
+   ntu_email: admin@campuseats.com
    student_id: ADMIN001
    name: Admin User
    phone: +6512345678
@@ -45,8 +45,8 @@
 7. **Click "Save"**
 
 8. **Test login:**
-   - Go to: https://ntu-food-xi.vercel.app
-   - Email: `admin@ntu.edu.sg`
+   - Go to: https://campuseats-xi.vercel.app
+   - Email: `admin@campuseats.com`
    - Password: `admin123`
    - Should work now!
 
@@ -58,7 +58,7 @@ If admin user exists but login still fails:
 
 1. **In Supabase Table Editor → users table**
 
-2. **Find admin@ntu.edu.sg row**
+2. **Find admin@campuseats.com row**
 
 3. **Click Edit on that row**
 
@@ -78,7 +78,7 @@ If admin user exists but login still fails:
 If you want to add all test data:
 
 1. **Verify DATABASE_URL in Render:**
-   - Render Dashboard → ntu-food-backend → Environment
+   - Render Dashboard → campuseats-backend → Environment
    - Confirm DATABASE_URL points to Supabase
 
 2. **Run seed script locally (connects to Supabase):**
@@ -100,7 +100,7 @@ If you want to add all test data:
    - Menu items
 
 4. **Test login:**
-   - Email: `admin@ntu.edu.sg`
+   - Email: `admin@campuseats.com`
    - Password: `admin123`
 
 ---
@@ -110,7 +110,7 @@ If you want to add all test data:
 ### Check What Error You're Getting:
 
 **In Browser:**
-1. Open https://ntu-food-xi.vercel.app
+1. Open https://campuseats-xi.vercel.app
 2. Press F12 to open Developer Console
 3. Go to "Network" tab
 4. Try to login
@@ -142,9 +142,9 @@ Test the backend API directly to isolate the issue:
 
 ### Using curl:
 ```bash
-curl -X POST https://ntu-food-backend.onrender.com/api/auth/login \
+curl -X POST https://campuseats-backend.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"ntu_email":"admin@ntu.edu.sg","password":"admin123"}'
+  -d '{"ntu_email":"admin@campuseats.com","password":"admin123"}'
 ```
 
 **Expected Response (Success):**
@@ -183,7 +183,7 @@ curl -X POST https://ntu-food-backend.onrender.com/api/auth/login \
    - updated_at (timestamp)
 
 3. **Check if admin exists:**
-   - Filter by email: admin@ntu.edu.sg
+   - Filter by email: admin@campuseats.com
    - Check role is: admin
    - Check is_active is: true
 
@@ -215,7 +215,7 @@ print(hash)
 
 ### Check Render Logs:
 
-1. **Render Dashboard → ntu-food-backend**
+1. **Render Dashboard → campuseats-backend**
 
 2. **Logs tab**
 
@@ -249,13 +249,13 @@ Once admin is added, you can login with:
 
 **Admin:**
 ```
-Email: admin@ntu.edu.sg
+Email: admin@campuseats.com
 Password: admin123
 ```
 
 **If you seeded test users:**
 ```
-Email: test.student@e.ntu.edu.sg
+Email: test.student@campuseats.com
 Password: testpassword123
 ```
 
@@ -266,7 +266,7 @@ Password: testpassword123
 **Check if admin exists:**
 ```sql
 -- In Supabase SQL Editor
-SELECT * FROM users WHERE ntu_email = 'admin@ntu.edu.sg';
+SELECT * FROM users WHERE ntu_email = 'admin@campuseats.com';
 ```
 
 **Add admin via SQL:**
@@ -274,7 +274,7 @@ SELECT * FROM users WHERE ntu_email = 'admin@ntu.edu.sg';
 -- In Supabase SQL Editor
 INSERT INTO users (ntu_email, student_id, name, phone, hashed_password, role, is_active, is_verified)
 VALUES (
-  'admin@ntu.edu.sg',
+  'admin@campuseats.com',
   'ADMIN001',
   'Admin User',
   '+6512345678',

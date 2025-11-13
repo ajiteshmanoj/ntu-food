@@ -1,5 +1,5 @@
 """
-Import NTU eateries from CSV file into the database.
+Import campus eateries from CSV file into the database.
 """
 
 import csv
@@ -14,9 +14,9 @@ def import_eateries():
     db = SessionLocal()
 
     try:
-        csv_path = "/Users/ajitesh/Desktop/My Projects/NTU_Food/ntu-food/ntu_eateries_partial_list.csv"
+        csv_path = "/Users/ajitesh/Desktop/My Projects/NTU_Food/campuseats/ntu_eateries_partial_list.csv"
 
-        print("\n📥 Importing NTU eateries from CSV...\n")
+        print("\n📥 Importing campus eateries from CSV...\n")
 
         imported_count = 0
         skipped_count = 0

@@ -1,6 +1,6 @@
-# 🚀 NTU Food App - Supabase Migration Guide
+# 🚀 CampusEats App - Supabase Migration Guide
 
-Complete step-by-step guide to migrate your NTU Food app from SQLite to Supabase PostgreSQL.
+Complete step-by-step guide to migrate your CampusEats app from SQLite to Supabase PostgreSQL.
 
 ---
 
@@ -127,9 +127,9 @@ EMAIL_TESTING_MODE=false
       ✓ Admin user created
 
    📝 Creating test student accounts...
-      ✓ Created: Test Student (test.student@e.ntu.edu.sg)
-      ✓ Created: John Doe (john.doe@e.ntu.edu.sg)
-      ✓ Created: Jane Smith (jane.smith@e.ntu.edu.sg)
+      ✓ Created: Test Student (test.student@campuseats.com)
+      ✓ Created: John Doe (john.doe@campuseats.com)
+      ✓ Created: Jane Smith (jane.smith@campuseats.com)
 
    📝 Creating food stalls...
       ✓ Created: Western Food Paradise
@@ -183,7 +183,7 @@ EMAIL_TESTING_MODE=false
 
 2. **Login with:**
    ```
-   Email: admin@ntu.edu.sg
+   Email: admin@campuseats.com
    Password: admin123
    ```
 
@@ -203,7 +203,7 @@ EMAIL_TESTING_MODE=false
 
 2. **Login with:**
    ```
-   Email: test.student@e.ntu.edu.sg
+   Email: test.student@campuseats.com
    Password: testpassword123
    ```
 
@@ -249,7 +249,7 @@ To send real OTP emails (not testing mode):
    SMTP_PORT=587
    SMTP_USERNAME=your-email@gmail.com
    SMTP_PASSWORD=your-app-password
-   SENDER_EMAIL=NTU Food <noreply@ntufood.com>
+   SENDER_EMAIL=CampusEats <noreply@ntufood.com>
    ```
 
 2. **For Gmail:**
@@ -357,7 +357,7 @@ pip install psycopg2-binary
 
 ## 🎉 Migration Complete!
 
-Your NTU Food app is now running on Supabase PostgreSQL!
+Your CampusEats app is now running on Supabase PostgreSQL!
 
 ### Benefits of Supabase:
 - ✅ Cloud-hosted database (no local SQLite file)

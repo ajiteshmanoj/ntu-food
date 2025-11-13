@@ -130,7 +130,7 @@ EMAIL_TESTING_MODE=false
 
 - [ ] Open browser: http://localhost:5174/admin/login
 - [ ] Login with:
-  - Email: admin@ntu.edu.sg
+  - Email: admin@campuseats.com
   - Password: admin123
 - [ ] Verify dashboard loads
 - [ ] Check statistics show:
@@ -151,7 +151,7 @@ EMAIL_TESTING_MODE=false
 
 - [ ] Open new browser tab: http://localhost:5174/login
 - [ ] Login with:
-  - Email: test.student@e.ntu.edu.sg
+  - Email: test.student@campuseats.com
   - Password: testpassword123
 - [ ] Verify homepage loads
 - [ ] Browse stalls:

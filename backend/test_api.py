@@ -6,7 +6,7 @@ import json
 BASE_URL = "http://localhost:8000"
 
 def test_api():
-    print("🧪 Testing NTU Food API...")
+    print("🧪 Testing CampusEats API...")
     print("=" * 50)
 
     # Test health check

@@ -1,12 +1,12 @@
 # 📧 Supabase Email Configuration Guide
 
-Complete guide to enable real email OTP sending for NTU Food App using Supabase Auth.
+Complete guide to enable real email OTP sending for CampusEats App using Supabase Auth.
 
 ---
 
 ## 🎯 Overview
 
-Your NTU Food app is now configured to send real OTP emails via Supabase Auth. This guide will walk you through the Supabase dashboard configuration.
+Your CampusEats app is now configured to send real OTP emails via Supabase Auth. This guide will walk you through the Supabase dashboard configuration.
 
 **What's Been Implemented:**
 - ✅ Supabase Python client integrated
@@ -61,7 +61,7 @@ Still in **Authentication** section:
 
 ### 2.2 Customize the Template
 
-Replace the default template with this NTU Food branded template:
+Replace the default template with this CampusEats branded template:
 
 ```html
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ Replace the default template with this NTU Food branded template:
                     <!-- Header -->
                     <tr>
                         <td style="padding: 40px 30px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #f97316 100%); text-align: center;">
-                            <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 700;">🍽️ NTU Food</h1>
+                            <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 700;">🍽️ CampusEats</h1>
                             <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 16px;">Smart Food Ordering for NTU</p>
                         </td>
                     </tr>
@@ -94,7 +94,7 @@ Replace the default template with this NTU Food branded template:
                             </p>
 
                             <p style="margin: 0 0 30px 0; color: #64748b; font-size: 16px; line-height: 1.6;">
-                                Thank you for registering with NTU Food. To complete your registration, please use the link below:
+                                Thank you for registering with CampusEats. To complete your registration, please use the link below:
                             </p>
 
                             <!-- CTA Button -->
@@ -128,7 +128,7 @@ Replace the default template with this NTU Food branded template:
 
                             <p style="margin: 30px 0 0 0; color: #64748b; font-size: 16px;">
                                 Best regards,<br>
-                                <strong style="color: #1e3a8a;">The NTU Food Team</strong>
+                                <strong style="color: #1e3a8a;">The CampusEats Team</strong>
                             </p>
                         </td>
                     </tr>
@@ -137,7 +137,7 @@ Replace the default template with this NTU Food branded template:
                     <tr>
                         <td style="padding: 30px; background-color: #f8fafc; text-align: center;">
                             <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px;">
-                                © 2025 NTU Food - Nanyang Technological University
+                                © 2025 CampusEats - Nanyang Technological University
                             </p>
                             <p style="margin: 0; color: #94a3b8; font-size: 12px;">
                                 This is an automated email. Please do not reply.
@@ -156,8 +156,8 @@ Replace the default template with this NTU Food branded template:
 ### 2.3 Configure Template Variables
 
 In the template settings, you can also customize:
-- **Subject Line:** `Verify your email for NTU Food`
-- **From Name:** `NTU Food`
+- **Subject Line:** `Verify your email for CampusEats`
+- **From Name:** `CampusEats`
 - **From Email:** Your verified sender email
 
 ### 2.4 Save the Template
@@ -207,7 +207,7 @@ SMTP Port: 587
 Username: resend
 Password: [Your Resend API Key]
 Sender Email: noreply@your-domain.com
-Sender Name: NTU Food
+Sender Name: CampusEats
 ```
 
 **2. SendGrid**
@@ -345,14 +345,14 @@ INFO: OTP queued for sending via Supabase to [email]
 
 ### 7.1 Add Logo to Email
 
-1. Upload your NTU Food logo to Supabase Storage:
+1. Upload your CampusEats logo to Supabase Storage:
    - Go to **Storage → Create Bucket → "public"**
    - Upload logo image
    - Copy public URL
 
 2. Add to email template:
 ```html
-<img src="YOUR_LOGO_URL" alt="NTU Food" style="max-width: 120px; margin-bottom: 20px;">
+<img src="YOUR_LOGO_URL" alt="CampusEats" style="max-width: 120px; margin-bottom: 20px;">
 ```
 
 ### 7.2 Personalize Email Content
@@ -407,7 +407,7 @@ For professional emails:
 Before going live, verify:
 
 - [ ] Supabase Auth Email provider is enabled
-- [ ] Email template is customized with NTU Food branding
+- [ ] Email template is customized with CampusEats branding
 - [ ] SMTP provider is configured (for production)
 - [ ] Email confirmation is enabled
 - [ ] Rate limiting is configured
@@ -429,7 +429,7 @@ After completing this setup:
 1. User fills registration form
 2. Backend generates OTP
 3. Supabase Auth sends email
-4. User receives professional NTU Food branded email
+4. User receives professional CampusEats branded email
 5. User enters OTP
 6. Account is created
 7. Welcome email sent (optional)
@@ -494,7 +494,7 @@ SUPABASE_KEY=eyJhbGci...
 
 ## 🎉 Success!
 
-Once configured, your NTU Food app will:
+Once configured, your CampusEats app will:
 - ✅ Send professional OTP emails via Supabase
 - ✅ Hide test OTPs in production
 - ✅ Provide excellent user experience

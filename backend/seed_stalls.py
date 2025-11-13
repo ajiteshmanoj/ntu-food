@@ -26,10 +26,10 @@ def create_stalls_and_menus():
                 return
 
         # Get admin user to assign as owner (optional)
-        admin_user = db.query(User).filter(User.ntu_email == "admin@ntu.edu.sg").first()
+        admin_user = db.query(User).filter(User.ntu_email == "admin@campuseats.com").first()
         owner_id = admin_user.id if admin_user else None
 
-        print("\n🏪 Creating NTU Food Stalls...\n")
+        print("\n🏪 Creating CampusEats Stalls...\n")
 
         # ==================== STALL 1: Western Food Stall ====================
         stall1 = Stall(

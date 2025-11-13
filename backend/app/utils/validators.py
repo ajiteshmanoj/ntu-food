@@ -3,11 +3,11 @@ from typing import Optional
 
 def validate_ntu_email(email: str) -> tuple[bool, Optional[str]]:
     """
-    Validate if email belongs to NTU domain.
+    Validate email address.
     Returns (is_valid, error_message)
 
-    TEMPORARY: Currently accepts any valid email due to NTU email server blocking.
-    TO REVERT: Uncomment the NTU domain check below when NTU IT whitelists the sender.
+    TEMPORARY: Currently accepts any valid email for development purposes.
+    TO REVERT: Uncomment the domain check below to enforce @campuseats.com emails.
     """
     if not email:
         return False, "Email is required"
@@ -17,33 +17,33 @@ def validate_ntu_email(email: str) -> tuple[bool, Optional[str]]:
     if not re.match(email_pattern, email):
         return False, "Invalid email format"
 
-    # TEMPORARY: Accept any valid email (NTU email servers block unknown Gmail senders)
+    # TEMPORARY: Accept any valid email for development
     # Student verification still enforced via Student ID
     return True, None
 
-    # TO REVERT TO NTU-ONLY: Uncomment the code below and delete the "return True, None" above
-    # # Check for NTU domain
+    # TO REVERT TO DOMAIN-ONLY: Uncomment the code below and delete the "return True, None" above
+    # # Check for campus domain
     # email_lower = email.lower()
-    # allowed_domains = ['@e.ntu.edu.sg', '@ntu.edu.sg']
+    # allowed_domains = ['@campuseats.com']
     #
     # if not any(email_lower.endswith(domain) for domain in allowed_domains):
-    #     return False, "Please use your NTU email address (@e.ntu.edu.sg or @ntu.edu.sg)"
+    #     return False, "Please use your campus email address (@campuseats.com)"
     #
     # return True, None
 
 def validate_student_id(student_id: str) -> tuple[bool, Optional[str]]:
     """
-    Validate NTU student ID format.
+    Validate student ID format.
     Returns (is_valid, error_message)
     """
     if not student_id:
         return False, "Student ID is required"
 
-    # NTU student ID pattern: Starts with U/u followed by 7 digits and 1 letter
+    # Student ID pattern: Starts with U/u followed by 7 digits and 1 letter
     pattern = r'^[Uu]\d{7}[A-Za-z]$'
 
     if not re.match(pattern, student_id):
-        return False, "Invalid NTU student ID format (e.g., U1234567A)"
+        return False, "Invalid student ID format (e.g., U1234567A)"
 
     return True, None
 

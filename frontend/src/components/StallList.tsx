@@ -162,7 +162,7 @@ const StallList = () => {
     <div className="stall-list-container">
       <header className="stall-header">
         <div className="header-content">
-          <h1>NTU Food</h1>
+          <h1>CampusEats</h1>
           <div className="user-info">
             <span>Welcome, {user?.name}</span>
             <button onClick={handleViewOrders} className="orders-button">

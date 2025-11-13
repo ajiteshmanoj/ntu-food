@@ -9,7 +9,7 @@ http://localhost:5173/admin/login
 
 ### 2. Login
 ```
-Email: admin@ntu.edu.sg
+Email: admin@campuseats.com
 Password: admin123
 ```
 
@@ -31,7 +31,7 @@ Password: admin123
 
 **Verify in Student App:**
 1. Open new tab: `http://localhost:5173/login`
-2. Login with: `test.student@e.ntu.edu.sg` / `testpassword123`
+2. Login with: `test.student@campuseats.com` / `testpassword123`
 3. Browse stalls → See "Quick Test Stall" immediately!
 
 **Verify Persistence:**
@@ -114,7 +114,7 @@ Check the actual database file:
 
 ```bash
 cd backend
-sqlite3 ntu_food.db
+sqlite3 campuseats.db
 
 # View all stalls
 SELECT id, name, location, is_open FROM stalls;
@@ -277,7 +277,7 @@ python seed_admin.py
 - Verify both servers running
 
 **Database issues?**
-- Check `backend/ntu_food.db` exists
+- Check `backend/campuseats.db` exists
 - Restart backend server
 
 ---

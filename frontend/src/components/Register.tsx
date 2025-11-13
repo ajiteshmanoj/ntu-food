@@ -33,8 +33,8 @@ const Register = () => {
       return false;
     }
 
-    if (!formData.ntu_email.endsWith('@e.ntu.edu.sg')) {
-      setError('Please use a valid NTU email address (@e.ntu.edu.sg)');
+    if (!formData.ntu_email.endsWith('@campuseats.com')) {
+      setError('Please use a valid NTU email address (@campuseats.com)');
       return false;
     }
 
@@ -75,9 +75,9 @@ const Register = () => {
         <div className="auth-branding">
           <div className="branding-content">
             <div className="branding-logo">🍽️</div>
-            <h1 className="branding-title">NTU Food</h1>
+            <h1 className="branding-title">CampusEats</h1>
             <p className="branding-subtitle">
-              Join thousands of NTU students who skip the queue with smart food ordering
+              Join thousands of university students who skip the queue with smart food ordering
             </p>
             <ul className="branding-features">
               <li>Instant access to all campus stalls</li>
@@ -92,7 +92,7 @@ const Register = () => {
         <div className="auth-form-section">
           <div className="auth-form-container">
             <div className="auth-header">
-              <h1>NTU Food</h1>
+              <h1>CampusEats</h1>
               <h2>Create your student account</h2>
             </div>
 
@@ -107,7 +107,7 @@ const Register = () => {
                   name="ntu_email"
                   value={formData.ntu_email}
                   onChange={handleChange}
-                  placeholder="your.name@e.ntu.edu.sg"
+                  placeholder="your.name@campuseats.com"
                   required
                 />
               </div>

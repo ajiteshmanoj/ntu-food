@@ -91,7 +91,7 @@ Should look like this:
 
 | Setting | Value |
 |---------|-------|
-| **Name** | ntu-food-backend (or similar) |
+| **Name** | campuseats-backend (or similar) |
 | **Region** | Singapore / Oregon |
 | **Branch** | main |
 | **Root Directory** | *(leave blank)* |
@@ -108,7 +108,7 @@ Should look like this:
 
 **Successful build should show:**
 ```
-==> Cloning from https://github.com/ajiteshmanoj/ntu-food...
+==> Cloning from https://github.com/ajiteshmanoj/campuseats...
 ==> Checking out commit 87d57e3...
 ==> Running build command 'pip install -r backend/requirements.txt'...
     Collecting fastapi
@@ -171,11 +171,11 @@ If render.yaml isn't working, configure manually:
 
 1. **Create New Web Service:**
    - Click "New +" → "Web Service"
-   - Connect GitHub → Select `ajiteshmanoj/ntu-food`
+   - Connect GitHub → Select `ajiteshmanoj/campuseats`
 
 2. **Configure Basic Settings:**
    ```
-   Name: ntu-food-backend
+   Name: campuseats-backend
    Region: Singapore (or closest)
    Branch: main
    Root Directory: (leave BLANK!)
@@ -244,7 +244,7 @@ curl https://YOUR-SERVICE.onrender.com/
 **Expected Response:**
 ```json
 {
-  "message": "Welcome to NTU Food API",
+  "message": "Welcome to CampusEats API",
   "version": "0.1.0",
   "docs": "/docs",
   "redoc": "/redoc"
@@ -441,7 +441,7 @@ curl http://localhost:8000/api/stalls
 ```
 INFO:     Started server process [1]
 INFO:     Waiting for application startup.
-NTU Food API started in production mode
+CampusEats API started in production mode
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:10000
 ```
