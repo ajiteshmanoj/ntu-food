@@ -116,9 +116,10 @@ class EmailService:
 
         # Production mode - send actual email
         if not self.smtp_email or not self.smtp_password:
-            error_msg = "SMTP credentials not configured. Please set SMTP_EMAIL and SMTP_PASSWORD in .env file."
+            error_msg = "SMTP credentials not configured. Please set SMTP_EMAIL and SMTP_PASSWORD environment variables, or enable EMAIL_TESTING_MODE=true for development."
             logger.error(error_msg)
-            return False, error_msg
+            logger.warning("💡 TIP: Set EMAIL_TESTING_MODE=true in your deployment environment to bypass email sending during development/testing")
+            return False, "Failed to register email. Please try again later."
 
         # Try sending email with retries
         last_error = None
